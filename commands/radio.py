@@ -71,7 +71,7 @@ async def play_radio(ctx: commands.Context, source: str = None, radio_channel: s
             before_options="-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5",
             options="-vn -ar 48000 -ac 2"
         )
-        vc.play(discord.PCMVolumeTransformer(source, volume=0.1))
+        vc.play(discord.PCMVolumeTransformer(source, volume=bot_config.radio_volume))
         await ctx.send(f"Tocando estação de rádio **{radio_channel}** do SomaFM no canal {user_channel.mention}!")
     except Exception as e:
         await ctx.send(f"Falha: Não consegui tocar a estação de rádio informada.")

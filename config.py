@@ -21,6 +21,7 @@ class Config:
         
         self.max_reminders_per_user = config.get("MAX_REMINDERS_PER_USER", 3)
         self.max_reminder_seconds = config.get("MAX_REMINDER_SECONDS", 43200)
+        self.radio_volume = config.get("RADIO_VOLUME", 0.03)
         
     def __repr__(self):
         return f"<Config token=*** channel={self.welcome_channel_id}>"
