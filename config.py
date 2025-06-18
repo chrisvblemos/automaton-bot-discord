@@ -14,8 +14,7 @@ class Config:
     def _load(self):
         load_dotenv()
         self.token : str = os.getenv("DISCORD_BOT_TOKEN", "")
-        self.openai_token: str = os.getenv("OPENAI_TOKEN", "")
-        self.welcome_channel_id : int = int(os.getenv("OPENAI_TOKEN", 0))
+        self.welcome_channel_id : int = int(os.getenv("WELCOME_CHANNEL_ID", 0))
         
         with open("config.json", "r") as f:
             config = json.load(f)
