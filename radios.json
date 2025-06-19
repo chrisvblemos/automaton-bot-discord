@@ -1,9 +1,10 @@
 {
-    "indie":  "https://somafm.com/indiepop",
-    "ambient": "https://somafm.com/groovesalad",
-    "hacking": "https://somafm.com/defcon",
-    "bossanova": "https://somafm.com/bossa",
-    "vintage": "https://somafm.com/insound",
-    "celtico": "https://somafm.com/thistle",
-    "country": "https://somafm.com/bootliquor"
+    "indie":  "https://ice1.somafm.com/indiepop-128-mp3",
+    "ambient": "https://ice1.somafm.com/groovesalad-128-mp3",
+    "hacking": "https://ice1.somafm.com/defcon-128-mp3",
+    "bossanova": "https://ice1.somafm.com/bossa-128-mp3",
+    "vintage": "https://ice1.somafm.com/insound-128-mp3",
+    "celtico": "https://ice1.somafm.com/thistle-128-mp3",
+    "country": "https://ice1.somafm.com/bootliquor-128-mp3",
+    "kexp": "https://kexp.streamguys1.com/kexp160.aac"
 }
