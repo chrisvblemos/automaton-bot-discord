@@ -1,8 +1,7 @@
-from bot import bot
-from config import bot_config
+import logger
 
-import commands
+from bot import bot
 import events
 import checks
 
-bot.run(bot_config.token)
+bot.run(bot.token)
