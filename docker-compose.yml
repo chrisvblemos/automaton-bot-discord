@@ -1,6 +1,8 @@
 services:
   automaton-bot:
     build: .
+    env_file:
+      - .env
     container_name: automaton-bot
     volumes:
       - .:/usr/src/automaton-bot-discord
