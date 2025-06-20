@@ -109,9 +109,39 @@ This allows you to fully localize or customize user-facing texts such as error m
 
 ---
 
-## 🛠️ Configuration
+## ⚙️ Configuration (`config.json`)
 
-- Topics and radio presets must be defined in the `config.json` file.
+Here’s an example of a valid `config.json`:
+
+```json
+{
+  "WELCOME_CHANNEL_ID": 0,
+  "ALLOWED_COMMAND_CHANNEL_IDS": [],
+  "INFOS": {
+    "duneawakening": "Atualmente o pessoal está jogando no servidor `Othello - Umbu`. Nossa guilda se chama `Tovarisch`."
+  },
+  "RADIO_STREAMS": {
+    "indie":  "https://ice1.somafm.com/indiepop-128-mp3",
+    "ambient": "https://ice1.somafm.com/groovesalad-128-mp3",
+    "hacking": "https://ice1.somafm.com/defcon-128-mp3",
+    "bossanova": "https://ice1.somafm.com/bossa-128-mp3",
+    "vintage": "https://ice1.somafm.com/insound-128-mp3",
+    "celtico": "https://ice1.somafm.com/thistle-128-mp3",
+    "country": "https://ice1.somafm.com/bootliquor-128-mp3",
+    "kexp": "https://kexp.streamguys1.com/kexp160.aac"
+  },
+  "MESSAGES_FILE": "messages_pt_br.yaml"
+}
+```
+
+### Required environment variables:
+
+The following environment variables must be defined to run the bot:
+
+```
+DISCORD_BOT_TOKEN=your_token_here
+CONFIG_FILENAME=config.json
+```
 
 ---
 

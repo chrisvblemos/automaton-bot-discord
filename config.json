@@ -1,7 +1,5 @@
 {
-  "MAX_REMINDERS_PER_USER": 3,
-  "MAX_REMINDER_SECONDS": 43200,
-  "RADIO_VOLUME": 0.05,
+  "WELCOME_CHANNEL_ID": 0,
   "ALLOWED_COMMAND_CHANNEL_IDS": [],
   "INFOS": {
     "duneawakening": "Atualmente o pessoal está jogando no servidor `Othello - Umbu`. Nossa guilda se chama `Tovarisch`."

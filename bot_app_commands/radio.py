@@ -69,7 +69,7 @@ async def play_radio(interaction: Interaction, source: str = None) -> None:
             before_options="-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5",
             options="-vn -ar 48000 -ac 2"
         )
-        bot.radio_volume_transformer = discord.PCMVolumeTransformer(source_audio, volume=bot.radio_volume)
+        bot.radio_volume_transformer = discord.PCMVolumeTransformer(source_audio, volume=0.08)
         vc.play(bot.radio_volume_transformer)
 
         await interaction.response.send_message(
