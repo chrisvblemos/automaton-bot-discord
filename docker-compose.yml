@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  automaton-bot:
+    build: .
+    container_name: automaton-bot
+    volumes:
+      - .:/usr/src/automaton-bot-discord
+    working_dir: /usr/src/automaton-bot-discord
+    restart: always
+    command: ["python", "./main.py"]
