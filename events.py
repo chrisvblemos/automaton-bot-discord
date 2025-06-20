@@ -38,8 +38,16 @@ async def on_member_join(member: discord.Member) -> None:
     
     if channel_id:
         welcome_channel = bot.get_channel(channel_id)
+        
         if welcome_channel:
-            await welcome_channel.send(f"Bem-vindo, camarada {member.mention}!")
+            raw = bot.messages["welcome_embed"]
+            embed = discord.Embed(
+                title=raw["title"],
+                description=raw["description"].replace("{username}", member.mention),
+                color=raw["color"]
+            )
+            embed.set_footer(text=raw["footer"]["text"])
+            await welcome_channel.send(embed=embed)
         else:
             log.error(f"Channel ID {channel_id} not found at {member.guild.name}.")
     else:

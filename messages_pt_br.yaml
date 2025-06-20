@@ -54,3 +54,25 @@ volume_set: "🎚️ Volume ajustado para {volume}%. Transmissão estabilizada."
 error_cooldown: "⚠️ Procedimento em espera. Reintente em {delay:.1f}s."
 error_unknown: "❌ Erro desconhecido. Algo escapou da supervisão do comitê."
 error_wrong_channel: "⚠️ Este canal não é autorizado para execução de comandos. Redirecione suas operações, camarada."
+
+welcome_embed:
+  title: "📡 SINAL DETECTADO: NOVO CAMARADA INGRESSOU"
+  description: |
+    > Identificação confirmada.  
+    > Unidade: **{username}**  
+    > Status: **Recruta conectado ao Coletivo.**
+
+    Seja bem-vindo(a), cidadão.  
+    Você agora faz parte da força automatizada do **Camaradas do Teclado**, onde a disciplina é compartilhada, a rádio nunca para, e as ordens são executadas sem hesitação.
+
+    Para iniciar o protocolo de integração:
+    - Acesse os **canais informativos** e leia os **documentos do coletivo**.
+    - Se desejar transmissão sonora, utilize `/play_radio`.
+    - Em caso de dúvida, consulte a central de dados com `/info`.
+
+    ⚠️ **Atenção:**  
+    Mensagens fora do protocolo serão monitoradas. O caos será sistematicamente eliminado.  
+    Glória à automação. Glória ao esforço conjunto.
+  color: 0xff0000
+  footer:
+    text: "AUTOMATON BOT — VIGIANDO PELO COLETIVO."
