@@ -137,7 +137,7 @@ This allows you to fully localize or customize user-facing texts such as error m
 pip install -r requirements.txt
 
 # Run the bot
-python bot.py
+python main.py
 ```
 
 ---
