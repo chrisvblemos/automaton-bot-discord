@@ -1,6 +1,6 @@
 from bot import bot
 from discord import Interaction, app_commands, InteractionType
-from checks import WrongChannel
+from checks import WrongChannel, WrongMusicChannel, ChannelNotFound
 import discord
 import asyncio
 import logging
@@ -19,6 +19,11 @@ async def on_app_command_error(interaction: Interaction, error: app_commands.App
             bot.messages["error_cooldown"].format(delay=error.retry_after),
             ephemeral=True
             )
+    elif isinstance(error, WrongMusicChannel):
+        return await interaction.response.send_message(
+            bot.messages["error_wrong_music_channel"],
+            ephemeral=True
+        )
     else:
         await interaction.response.send_message(bot.messages["error_unknown"], ephemeral=True)
         log.warning(f"Command {interaction.command.name} called by {interaction.user} failed: {error}")
@@ -34,28 +39,25 @@ async def on_interaction(interaction: Interaction):
 async def on_member_join(member: discord.Member) -> None:
     """Handles member joining server."""
     
-    channel_id = bot.welcome_channel_id
-    
-    if channel_id:
-        welcome_channel = bot.get_channel(channel_id)
-        
-        if welcome_channel:
-            raw = bot.messages["welcome_embed"]
-            embed = discord.Embed(
-                title=raw["title"],
-                description=raw["description"].replace("{username}", member.mention),
-                color=raw["color"]
-            )
-            embed.set_footer(text=raw["footer"]["text"])
-            await welcome_channel.send(embed=embed)
-        else:
-            log.error(f"Channel ID {channel_id} not found at {member.guild.name}.")
-    else:
-        log.error("Welcome channel not set in 'config.json'.")
+    raw = bot.embeds["welcome_embed"]
+    embed = discord.Embed(
+        title=raw["title"],
+        description=raw["description"].replace("{username}", member.mention),
+        color=raw["color"]
+    )
+    embed.set_footer(text=raw["footer"]["text"])
+    await bot.welcome_channel.send(embed=embed)
         
 @bot.event
 async def on_ready() -> None:
     """Handles bot initialization."""
+    
+    bot.welcome_channel = bot.get_channel(bot.welcome_channel_id)
+    if bot.welcome_channel is None:
+        raise ChannelNotFound(f"Welcome channel {bot.welcome_channel_id} not found, check your config json.")
+    bot.music_channel = bot.get_channel(bot.music_channel_id)
+    if bot.music_channel is None:
+        raise ChannelNotFound(f"Music channel {bot.music_channel_id} not found, check your config json.")
     
     log.info(f"{bot.user} initialized!")
 

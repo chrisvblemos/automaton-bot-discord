@@ -1,0 +1,8 @@
+{
+  "WELCOME_CHANNEL_ID": 0,
+  "MUSIC_CHANNEL_ID": 0,
+  "ALLOWED_COMMAND_CHANNEL_IDS": [],
+  "LOCAL_MESSAGES_FILENAME": "bot_messages_template.yaml",
+  "LOCAL_DESCRIPTIONS_FILENAME": "bot_descriptions_template.yaml",
+  "LOCAL_EMBEDS_FILENAME": "bot_embeds_template.yaml"
+}

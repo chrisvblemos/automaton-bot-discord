@@ -1,0 +1,28 @@
+welcome_embed:
+  title: "📡 SINAL DETECTADO: NOVO CAMARADA INGRESSOU"
+  description: |
+    > Identificação recebida.  
+    > Unidade: **{username}**  
+    > Status: **Integrado ao Coletivo Automatizado.**
+
+    Bem-vindo(a), cidadão.  
+    Você agora faz parte da força descentralizada do **Camaradas do Teclado**, um agrupamento coordenado de operadores focados em jogos cooperativos e comunicações organizadas.
+
+    Para garantir sua permanência funcional no coletivo:
+    - Acesse o canal <#722461866483253280> e esteja ciente das diretrizes operacionais.
+    - A convivência é regida por disciplina, respeito mútuo e iniciativa coletiva.
+
+    🔒 **Observação:**  
+    Atividades fora de protocolo são registradas e analisadas por nossa inteligência automatizada.  
+    A ordem é mantida. O esforço é compartilhado.  
+    Glória ao funcionamento coordenado.
+  color: 0xff0000
+  footer:
+    text: "AUTOMATON BOT — SUPERVISÃO CONTÍNUA DO COLETIVO."
+
+yt_playlist_playing_embed:
+  title: "🎶 FAIXA EM EXECUÇÃO"
+  description: "[{title}]({url}) está sendo transmitida."
+  color: 0xff0000
+  footer:
+    text: "AUTOMATON BOT — TRANSMISSÃO ATIVA"

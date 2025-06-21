@@ -35,7 +35,7 @@ else:
     file_handler.setFormatter(fallback_formatter)
 
 discord_logger.setLevel(logging.DEBUG)
-discord_logger.addHandler(file_handler)
+# discord_logger.addHandler(file_handler)
 
 root_logger = logging.getLogger()
 root_logger.setLevel(logging.DEBUG)
